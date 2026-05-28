@@ -4,11 +4,14 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Andrey Marennikov
 -/
 
-import Mathlib.Analysis.Convex.Caratheodory
-import Mathlib.Algebra.Group.Pointwise.Set.Basic
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Real.Basic
-import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+module
+
+public import Mathlib.Analysis.Convex.Caratheodory
+public import Mathlib.Algebra.Group.Pointwise.Set.Basic
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Real.Basic
+public import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+
 
 /-!
 # Shapley-Folkman lemma
@@ -20,6 +23,8 @@ The main result is `shapley_folkman`, which states that if a point belongs to a 
 sum of convex hulls, then it can be represented as a sum where all but at most
 `finrank ℝ E` terms belong to the original sets.
 -/
+
+@[expose] public section
 
 open scoped Pointwise BigOperators
 open Set Finset
